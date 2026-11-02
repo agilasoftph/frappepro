@@ -33,5 +33,15 @@ before_uninstall = "frappehero.uninstall.before_uninstall"
 # -------
 before_tests = "frappehero.install.before_tests"
 
+# Opening Invoice Creation Tool lists Credit Note and Debit Note.
+# The options are also written onto the DocType during migrate.
+override_doctype_class = {
+	"Opening Invoice Creation Tool": "frappehero.accounts.opening_invoice_creation_tool.OpeningInvoiceCreationTool",
+}
+
+doctype_js = {
+	"Opening Invoice Creation Tool": "public/js/opening_invoice_creation_tool.js",
+}
+
 export_python_type_annotations = True
 require_type_annotated_api_methods = True
